@@ -1,0 +1,257 @@
+[
+  {
+    "key": "image_viewer.server.purpose",
+    "value": "Used to check the inference results of a deployed model.",
+    "scope": ""
+  },
+  {
+    "key": "image_viewer.server.setup",
+    "value": "Specify the path where the original images and inference result txt files are located on the server running Gradio MLOps.",
+    "scope": ""
+  },
+  {
+    "key": "image_viewer.server.usage",
+    "value": "1) Use the dropdown button in the top right. 2) Specify the path for original images. 3) Specify the path for inference result txt file. 4) Click the setup button to automatically output the original images. 5) Load inference results based on the corresponding txt file.",
+    "scope": ""
+  },
+  {
+    "key": "image_viewer.local.purpose",
+    "value": "Used to check the inference results of a deployed model.",
+    "scope": ""
+  },
+  {
+    "key": "image_viewer.local.setup",
+    "value": "Specify the path where the original images and inference result txt files are located on the user's PC.",
+    "scope": ""
+  },
+  {
+    "key": "image_viewer.local.usage",
+    "value": "1) Use the dropdown button in the top right. 2) Upload the original image. 3) Upload the inference result txt file. 4) Click the local setup button to automatically output the original image. 5) Load inference results based on the corresponding txt file.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.local_upload.purpose",
+    "value": "Upload locally created datasets to a specified path on the server.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.local_upload.usage",
+    "value": "1) Specify the folder name. 2) Upload images. 3) Upload txt files. 4) Save by uploading to the server.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.local_upload.default_path",
+    "value": "Default save path is seonge_gradio/test_yolo_project/datasets_for_labeling/<folder_name>/images, labels.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.purpose",
+    "value": "Build a training dataset for model training.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.operation",
+    "value": "Upload locally created datasets to a specified path on the server, combining with existing datasets or solely utilizing the new dataset as per user settings.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.usage",
+    "value": "1) Check if existing datasets will be utilized (Yes or No). 2) (If Yes) Set the path for the existing dataset.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.selection_purpose",
+    "value": "After uploading training data locally, to select the path of the new dataset and check the new image list.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.storage_settings",
+    "value": "1) Set the storage path for the new dataset. 2) Specify the folder name for the new dataset.",
+    "scope": ""
+  },
+  {
+    "key": "dataset.setup.train.inclusion_check",
+    "value": "Check which data to include in the training dataset; checked data goes to train, unchecked goes to validation.",
+    "scope": ""
+  },
+  {
+    "key": "train.monitor.purpose",
+    "value": "Monitor model training and status.",
+    "scope": ""
+  },
+  {
+    "key": "train.monitor.usage",
+    "value": "1) Upload data.yaml. 2) Upload model. 3) Set learning parameters. 4) Start training.",
+    "scope": ""
+  },
+  {
+    "key": "train.monitor.epoch_evaluation.purpose",
+    "value": "Evaluate and save the model's confidence at each epoch during training.",
+    "scope": ""
+  },
+  {
+    "key": "train.monitor.epoch_evaluation.usage",
+    "value": "1) Set the path for models generated in this training session. 2) Set the path for images used for confidence evaluation. 3) Set inference parameters. 4) Execute epoch evaluation.",
+    "scope": ""
+  },
+  {
+    "key": "train.monitor.metric.purpose",
+    "value": "Check model training evaluation metrics.",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.purpose",
+    "value": "Monitor the inference performance of the currently deployed model based on confidence.",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.setup",
+    "value": "Assumes that the model records confidence in a txt file containing structure: class, conf, x1, y1, x2, y2, x3, y3, ...",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.usage",
+    "value": "1) Click aggregate/update button. 2) Check results on the right.",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.conf_statistics",
+    "value": "Calculates daily confidence metrics by averaging the confidence values of multiple inference results.",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.low_performance_selection.purpose",
+    "value": "Utilized to re-use inference results from days of low performance based on the confidence threshold for further training.",
+    "scope": ""
+  },
+  {
+    "key": "model.performance.monitoring.low_performance_selection.usage",
+    "value": "1) Set confidence threshold. 2) Load dates where mean confidence ≤ threshold. 3) Select dates. 4) Copy selected dates.",
+    "scope": ""
+  },
+  {
+    "key": "data.download.purpose",
+    "value": "To download data for re-training locally.",
+    "scope": ""
+  },
+  {
+    "key": "data.download.steps.zip",
+    "value": "A ZIP file is created for download.",
+    "scope": ""
+  },
+  {
+    "key": "data.download.steps.file_click",
+    "value": "Click the file to download it.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.purpose",
+    "value": "To create and edit labels for the training dataset.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.tool.recommendation",
+    "value": "It is recommended to use a separate labeling tool.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.usage.image_json",
+    "value": "Use when both image and JSON (label file) are available.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.usage.image_txt",
+    "value": "Use when both image and TXT (inference result) are available.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.unusable.image_only",
+    "value": "Cannot be used if only image files are available.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.feature.json_generation",
+    "value": "Generates a JSON file from the inference result TXT file, stored at /home/gpuadmin/seongje_gradio2.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.json.compatibility",
+    "value": "Currently readable JSON is in COCO format; X-Anylabeling generated JSON is not readable.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.new_labeling",
+    "value": "New label creation feature is needed.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.save.edit_json",
+    "value": "Currently saved only as edited.json; needs to save with the same name as the image.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.convert.json_txt",
+    "value": "Feature needed to convert JSON back to TXT.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.upload_image",
+    "value": "Step 1: Upload an image.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.upload_inference",
+    "value": "Step 2: Upload inference result TXT.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.upload_classes",
+    "value": "Step 3: Upload classes.txt.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.generate_json",
+    "value": "Step 4: Click Generate JSON button.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.upload_json",
+    "value": "Step 5: Upload JSON.",
+    "scope": ""
+  },
+  {
+    "key": "labeling.steps.load_polygon",
+    "value": "Step 6: Click LoadPolygon button.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.purpose",
+    "value": "To visually compare the inference performance between the existing model and the newly trained model based on actual image inference results.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.steps.refresh",
+    "value": "Initial step: Click 'Refresh'.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.steps.select_image",
+    "value": "Step 1: Select the original image for comparison.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.steps.select_existing_model",
+    "value": "Step 2: Select the existing model path.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.steps.select_new_model",
+    "value": "Step 3: Select the new model path.",
+    "scope": ""
+  },
+  {
+    "key": "model.comparison.steps.compare_results",
+    "value": "Step 4: Click the inference results comparison button.",
+    "scope": ""
+  }
+]
